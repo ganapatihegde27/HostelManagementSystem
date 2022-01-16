@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Hostel Management System</title>
+  </head>
+  <body>
+    <header>
+      <div id="brand"><a href="/">Hostel Room Booking Management System</a></div>
+      <nav>
+        <ul>
+          <li><a href="/hostels/">Hostels</a></li>
+          <li><a href="/rooms/">Rooms</a></li>
+          <li><a href="/students/">Students</a></li>
+          <li><a href="/about/">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+    <script>
+    function toggleMobileMenu(menu) {
+        menu.classList.toggle('open');
+    }
+    </script>
+  </body>
+</html>

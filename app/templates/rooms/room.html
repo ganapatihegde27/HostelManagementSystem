@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Room Name: {{  room.room_name }} </h1>
+<h2>No of Students: {{ total_students.count }} </h2>
+{% if student_list %}
+    <ul>
+    {% for student in student_list %}
+        <li><a href="/student/{{ student.student_id }}/">{{ student.student_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p> No students are available.</p>
+{% endif %}
+
+<button> Add new room </button>
+
+{% endblock %}

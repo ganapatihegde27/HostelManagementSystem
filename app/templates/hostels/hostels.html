@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if hostel_list %}
+    <ul>
+    {% for hostel in hostel_list %}
+        <li><a href="/hostel/{{ hostel.hostel_id }}/">{{ hostel.hostel_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hostels are available.</p>
+{% endif %}
+
+<button> Add new hostel </button>
+
+{% endblock %}

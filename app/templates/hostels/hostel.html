@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hostel Name: {{  hostel.hostel_name }} </h1>
+<h2>No of Rooms: {{ total_rooms.count }} </h2>
+{% if room_list %}
+    <ul>
+    {% for room in room_list %}
+        <li><a href="/room/{{ room.room_id }}/">{{ room.room_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No rooms are available.</p>
+{% endif %}
+
+<button> Add new room </button>
+
+{% endblock %}

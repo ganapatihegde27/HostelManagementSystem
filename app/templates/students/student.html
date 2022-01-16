@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> Student Details </h1>
+    <li>Student ID:                 {{ student.student_id }}</li>
+    <li>Student Name:               {{ student.student_name }}</li>
+    <li>Student Phone number:       {{ student.phone_no }}</li>
+    <li>Student Department:         {{ student.dept }}</li>
+    <li>Student Hostel Duration:    {{ student.years_of_study }} years</li>
+    <li>Student Room Name:          {{ room.room_name }}</li>
+    <li>Student Hostel Name:        {{ hostel.hostel_name }}</li>
+
+{% endblock %}
