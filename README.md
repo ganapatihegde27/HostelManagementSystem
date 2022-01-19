@@ -1,10 +1,11 @@
 # HostelManagementSystem
 
-How to run:
-
+## Installation
 Create a virtual environment in python and install the dependencies
+
 Run the MySQL server on localhost:3306
-Create a database called db on the server
+
+Create a database called 'db' on the MySQL server
 
 Run the following commands on the terminal
 ```bash
