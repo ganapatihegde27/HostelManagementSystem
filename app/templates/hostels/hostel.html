@@ -13,6 +13,7 @@
     <p>No rooms are available.</p>
 {% endif %}
 
-<button> Add new room </button>
+<button onclick="window.location.href = '/room/booking/'"> Add new room </button>
+<button onclick="window.location.href = '/hostel/{{ hostel.hostel_id }}/remove'"> Delete hostel </button>
 
 {% endblock %}

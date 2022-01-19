@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Total Students: {{ total_rooms.count }} </h2>
+<h2>Total Students: {{ total_students.count }} </h2>
 
 {% if student_list %}
     <ul>
@@ -13,6 +13,6 @@
     <p>No students are available.</p>
 {% endif %}
 
-<button> Add new student </button>
+<button onclick="window.location.href = '/student/booking/'"> Add new student </button>
 
 {% endblock %}

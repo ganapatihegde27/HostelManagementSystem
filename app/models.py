@@ -28,18 +28,18 @@ class Room(models.Model):
     def __str__(self):
         return self.room_name
 
+class Room_allotment(models.Model):
+    id = models.IntegerField(primary_key=True)
+    joining_date = models.DateField()
+    vacating_date = models.DateField()
+    room = models.ForeignKey(Room, on_delete=models.CASCADE)
+
 class Student(models.Model):
     student_id = models.IntegerField(primary_key=True)
     student_name = models.CharField(max_length=100)
     phone_no = models.IntegerField()
     dept = models.CharField(max_length=100)
     years_of_study = models.IntegerField(default=1)
+    room_allotment = models.ForeignKey(Room_allotment, on_delete=models.CASCADE)
     def __str__(self):
         return self.student_name
-
-class Room_allotment(models.Model):
-    id = models.IntegerField(primary_key=True)
-    joining_date = models.DateField()
-    vacating_date = models.DateField()
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    student = models.OneToOneField(Student, on_delete=models.CASCADE)
